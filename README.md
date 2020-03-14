@@ -55,7 +55,7 @@ Please read [CONTRIBUTING](https://marketing-logic.atlassian.net/wiki/spaces/ML/
 ## Authors
 
 * **Dmitry Ivashcenko** - *Initial work* - [FatMan](https://github.com/fatman)
-* **Gleb Vazhenin** - *Python implementation* - [FatMan](https://github.com/punkerpunker)
+* **Gleb Vazhenin** - *Python implementation* - [punkerpunker](https://github.com/punkerpunker)
 
 
 ## License
