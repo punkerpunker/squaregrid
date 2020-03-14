@@ -40,7 +40,7 @@ sudo pip3 install squaregrid
 
 To verify installation try: 
 
-```
+```python
 import squaregrid
 ```
 
@@ -55,6 +55,8 @@ Please read [CONTRIBUTING](https://marketing-logic.atlassian.net/wiki/spaces/ML/
 ## Authors
 
 * **Dmitry Ivashcenko** - *Initial work* - [FatMan](https://github.com/fatman)
+* **Gleb Vazhenin** - *Python implementation* - [FatMan](https://github.com/punkerpunker)
+
 
 ## License
 
