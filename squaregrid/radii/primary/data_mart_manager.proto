@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+package primary;
+
+import "utils/datamart.proto";
+
+service DataMartManager {
+	rpc MakeDataMart(MakeDataMartRequest)
+		returns (MakeDataMartResponse) {}
+}
+
+message MakeDataMartRequest {
+	utils.DataMart data = 1;
+	int32 longitude_column = 2;
+	int32 latitude_column = 3;
+	string prefix = 4;
+
+	message TableDescription {
+		string table_name = 1;
+		repeated int32 radii = 2;
+	}
+	repeated TableDescription tables = 5;
+
+	string output_table = 6;
+	bool return_mart = 7;
+}
+
+message MakeDataMartResponse {
+	int32 error = 1;
+	string comment = 2;
+	utils.DataMart data = 3;
+}

@@ -1,0 +1,1 @@
+/usr/bin/c++  -fPIC  -std=c++17 -fPIC -O3 -DNDEBUG -O2  -shared  -o pywrap_grid_metadata.so CMakeFiles/pywrap_grid_metadata.dir/pywrap_grid_metadata.cxx.o CMakeFiles/pywrap_grid_metadata.dir/grid_metadata.cc.o -lpython3.5m ../utils/liblogging.a ../liblibpqxx.a -lpq ../libeasyloggingpp.a 

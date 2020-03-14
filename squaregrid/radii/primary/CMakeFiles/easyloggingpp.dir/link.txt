@@ -1,0 +1,2 @@
+/usr/bin/ar qc libeasyloggingpp.a  CMakeFiles/easyloggingpp.dir/external/easyloggingpp/src/easylogging++.cc.o
+/usr/bin/ranlib libeasyloggingpp.a

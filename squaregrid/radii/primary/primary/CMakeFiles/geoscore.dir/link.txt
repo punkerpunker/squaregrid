@@ -1,0 +1,1 @@
+/usr/bin/c++    -std=c++17 -fPIC -O3 -DNDEBUG -O2   CMakeFiles/geoscore.dir/geoscore_static.cxx.o  -o geoscore -rdynamic -lpython3.5m ../grids/libgrid_metadata.a ../utils/liblogging.a ../liblibpqxx.a -lpq ../libeasyloggingpp.a 

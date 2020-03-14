@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package primary;
+
+import "utils/datamart.proto";
+
+service PZTGenerator {
+	rpc MakePZTMart(MakePZTMartRequest)
+		returns (MakePZTMartResponse) {}
+}
+
+message MakePZTMartRequest {
+	utils.DataMart source_mart = 1;
+	int32 rank = 2;
+	float distance = 3;
+	string address_column = 4;
+	int32 chunk_size = 5;
+	bool return_mart = 6;
+	string output_table = 7;
+}
+
+message MakePZTMartResponse {
+	int32 status = 1;
+	string comment = 2;
+	utils.DataMart data_mart = 3;
+}

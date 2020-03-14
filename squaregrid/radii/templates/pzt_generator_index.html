@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PZT Generator Dashboard</title>
+	<meta charset="utf-8" />
+	<script type="text/javascript">
+		function toggleGeo(checkbox) {
+			document.getElementsByName('lat_col')[0].disabled = checkbox.checked
+			document.getElementsByName('lng_col')[0].disabled = checkbox.checked
+			document.getElementsByName('address_column')[0].disabled = (
+				!checkbox.checked)
+		}
+	</script>
+</head>
+<body>
+	<h1>PZT Generator Dashboard</h1>
+	<form action="" method="post" enctype="multipart/form-data">
+		<input type="file" name="file" />
+		<br/>
+
+		<label for="sep">Separator:</label>
+		<input type="text" name="sep" value=","/>
+		<br/>
+
+		<label for="address_column">Address column:</label>
+		<input type="text" name="address_column"/>
+		<br/>
+
+		<label for="rank">Matching rank:</label>
+		<input type="number" name="rank" value="16"/>
+		<br/>
+
+		<label for="distnace">Distance:</label>
+		<input type="number" name="distance" value="3.0"/>
+		<br/>
+
+		<label for="chunksize">Chunk size:</label>
+		<input type="number" name="chunksize" value="300"/>
+		<br/>
+
+		<label for="output_table">Save into table:</label>
+		<input type="text" name="output_table"/>
+		<br/>
+
+		<input type="submit" name="submit"/>
+		<br/>
+	</form>
+	<div>
+		{% with messages = get_flashed_messages() %}
+			{% if messages %}
+				<ul class=flashes>
+				{% for message in messages %}
+					<li>{{ message }}</li>
+				{% endfor %}
+				</ul>
+			{% endif %}
+		{% endwith %}
+	</div>
+</body>

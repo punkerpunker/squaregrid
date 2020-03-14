@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Geocoder Dashboard</title>
+    <meta charset="utf-8" />
+</head>
+<body>
+	<h1>Geocoder Dashboard</h1>
+	<ul>
+	{% for item in requests %}
+		<li>
+			<ul style="list-style-type: square;">
+				<li> request id: {{ item[0] }}
+				<li> status: {{ item[1].DESCRIPTOR.enum_types_by_name['RequestStatus'].values_by_number[item[1].status].name }}
+				<li> group tag: {{ item[1].group_tag }}
+			</ul>
+		</li>
+	{% endfor %}
+	</ul>
+</body>

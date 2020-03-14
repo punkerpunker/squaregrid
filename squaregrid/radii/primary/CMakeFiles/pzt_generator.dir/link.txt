@@ -1,0 +1,1 @@
+/usr/bin/c++    -std=c++17 -fPIC   CMakeFiles/pzt_generator.dir/pzt_generator_static.cxx.o  -o pzt_generator -rdynamic -lpython3.5m ../grids/libgrid_metadata.a ../utils/liblogging.a ../liblibpqxx.a -lpq ../libeasyloggingpp.a 

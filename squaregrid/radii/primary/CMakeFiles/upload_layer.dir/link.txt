@@ -1,0 +1,1 @@
+/usr/bin/c++    -std=c++17 -fPIC   CMakeFiles/upload_layer.dir/upload_layer_static.cxx.o  -o upload_layer -rdynamic -lpython3.5m ../grids/libgrid_metadata.a ../utils/liblogging.a ../liblibpqxx.a -lpq ../libeasyloggingpp.a 

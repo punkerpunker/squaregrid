@@ -1,0 +1,1 @@
+/usr/bin/c++    -std=c++17 -fPIC   CMakeFiles/locality_size.dir/locality_size_static.cxx.o  -o locality_size -rdynamic -lpython3.5m ../grids/libgrid_metadata.a ../utils/liblogging.a ../liblibpqxx.a -lpq ../libeasyloggingpp.a 

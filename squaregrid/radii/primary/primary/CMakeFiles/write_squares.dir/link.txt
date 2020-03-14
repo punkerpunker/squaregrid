@@ -1,0 +1,1 @@
+/usr/bin/c++    -std=c++17 -fPIC -O3 -DNDEBUG -O2   CMakeFiles/write_squares.dir/write_squares.cc.o  -o write_squares -rdynamic ../grids/libgrid_metadata.a ../utils/liblogging.a ../external/gflags/libgflags.a ../liblibpqxx.a -lpq -lpthread ../libeasyloggingpp.a -lpthread 

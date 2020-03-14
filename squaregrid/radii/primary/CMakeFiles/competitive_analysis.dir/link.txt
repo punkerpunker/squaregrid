@@ -1,0 +1,1 @@
+/usr/bin/c++    -std=c++17 -fPIC   CMakeFiles/competitive_analysis.dir/competitive_analysis_static.cxx.o  -o competitive_analysis -rdynamic -lpython3.5m ../grids/libgrid_metadata.a ../utils/liblogging.a ../liblibpqxx.a -lpq ../libeasyloggingpp.a 

@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package utils;
+
+message DataMartCell {
+	oneof data_type {
+		string str_val = 1;
+		int64 int_val = 2;
+		float float_val = 3;
+	}
+};
+
+message DataMartColumn {
+	string name = 1;
+	repeated DataMartCell cells = 2;
+}
+
+message DataMart {
+	int32 nrows = 1;
+	repeated DataMartColumn columns = 2;
+}
+

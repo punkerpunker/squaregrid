@@ -1,0 +1,1 @@
+/usr/bin/c++    -std=c++17 -fPIC   CMakeFiles/legacy_square_ids.dir/legacy_square_ids.cc.o  -o legacy_square_ids -rdynamic ../grids/libgrid_metadata.a ../utils/liblogging.a ../external/gflags/libgflags.a -lpthread ../liblibpqxx.a -lpq ../libeasyloggingpp.a -lpthread 

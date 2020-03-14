@@ -1,0 +1,1 @@
+/usr/bin/c++    -std=c++17 -fPIC -O3 -DNDEBUG -O2   CMakeFiles/calculate_traffic.dir/calculate_traffic.cc.o  -o calculate_traffic -rdynamic ../utils/liblogging.a ../grids/libgrid_metadata.a -Wl,-Bstatic -lboost_system -lboost_filesystem -lboost_thread -Wl,-Bdynamic -lpthread ../external/gflags/libgflags.a ../liblibpqxx.a -lpq -lpthread ../libeasyloggingpp.a -lpthread 

@@ -1,0 +1,2 @@
+/usr/bin/ar qc libgrid_metadata.a  CMakeFiles/grid_metadata.dir/grid_metadata.cc.o
+/usr/bin/ranlib libgrid_metadata.a

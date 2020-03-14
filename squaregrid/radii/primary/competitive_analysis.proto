@@ -1,0 +1,38 @@
+syntax = "proto3";
+
+package primary;
+
+import "utils/datamart.proto";
+
+service CompetitiveAnalyser {
+	rpc MakeCompetitiveAnalysisMart(MakeCompetitiveAnalysisMartRequest)
+		returns (MakeCompetitiveAnalysisMartResponse) {}
+}
+
+message CompetitorsDataSource {
+	oneof source_type {
+		string sql_query = 1;
+	}
+}
+
+message MakeCompetitiveAnalysisMartRequest {
+	CompetitorsDataSource data_source = 1;
+	repeated int32 radii = 2;
+	int32 top_brands_count = 3;
+	int32 brands_radius = 4;
+	string output_table = 5;
+	bool return_mart = 6;
+	string prefix = 7;
+	string address_column = 8;
+	string lat_column = 9;
+	string lng_column = 10;
+	bool exclude_most_common = 11;
+	float tolerance = 12;
+	utils.DataMart source_mart = 13;
+}
+
+message MakeCompetitiveAnalysisMartResponse {
+	int32 status = 1;
+	string comment = 2;
+	utils.DataMart data_mart = 3;
+}

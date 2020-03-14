@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package datamart;
+
+message SquareInfo {
+	int32 square_id = 1;
+	repeated float data = 2;
+}
+
+message RegionInfo {
+	repeated SquareInfo squares = 1;
+}

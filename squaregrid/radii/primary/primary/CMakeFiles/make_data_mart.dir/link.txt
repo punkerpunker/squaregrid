@@ -1,0 +1,1 @@
+/usr/bin/cc  -O3 -DNDEBUG   CMakeFiles/make_data_mart.dir/make_data_mart_static.c.o  -o make_data_mart -rdynamic -lpython3.5m 

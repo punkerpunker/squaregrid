@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Competitive Analyser Dashboard</title>
+	<meta charset="utf-8" />
+	<script type="text/javascript">
+		function toggleGeo(checkbox) {
+			document.getElementsByName('lat_col')[0].disabled = checkbox.checked
+			document.getElementsByName('lng_col')[0].disabled = checkbox.checked
+			document.getElementsByName('address_column')[0].disabled = (
+				!checkbox.checked)
+		}
+	</script>
+</head>
+<body>
+	<h1> Competitive Analyser Dashboard</h1>
+	<form action="" method="post" enctype="multipart/form-data">
+		<input type="file" name="file" />
+		<br/>
+
+		<label for="sep">Separator:</label>
+		<input type="text" name="sep" value=","/>
+		<br/>
+
+		<label for="geocode">Geocode </label>
+		<input type="checkbox" name="geocode" checked="true"
+			onchange="toggleGeo(this);"/>
+		<br/>
+
+		<label for="address_column">Address column:</label>
+		<input type="text" name="address_column"/>
+		<br/>
+
+		<label for="lat_col">Latitude column:</label>
+		<input type="text" name="lat_col" disabled />
+		<br/>
+
+		<label for="lng_col">Longitude column:</label>
+		<input type="text" name="lng_col" disabled />
+		<br/>
+
+		<label for="prefix">Prefix added columns with:</label>
+		<input type="text" name="prefix"/>
+		<br/>
+
+		<label for="radii">Radii:</label>
+		<input type="text" name="radii"/>
+		<br/>
+
+		<label for="top_brands_count">Number of top-brands to display:</label>
+		<input type="number" name="top_brands_count"/>
+		<br/>
+
+		<label for="brands_radius">Size of locality to display brands:</label>
+		<input type="number" name="brands_radius"/>
+		<br/>
+
+		<label for="competitors_query">Competitors (SQL query):</label>
+		<input type="text" name="competitors_query"/>
+		<br/>
+
+		<label for="output_table">Save into table:</label>
+		<input type="text" name="output_table"/>
+		<br/>
+
+		<label for="exclude_most_common">Exclude most common pair of coordinates</label>
+		<input type="checkbox" name="exclude_most_common" />
+		<label for="tolerance">using floating point tolerance:</label>
+		<input type="number" name="tolerance" value="1e-6"/>
+		<br/>
+
+		<input type="submit" name="submit"/>
+		<br/>
+	</form>
+	<div>
+		{% with messages = get_flashed_messages() %}
+			{% if messages %}
+				<ul class=flashes>
+				{% for message in messages %}
+					<li>{{ message }}</li>
+				{% endfor %}
+				</ul>
+			{% endif %}
+		{% endwith %}
+	</div>
+</body>
